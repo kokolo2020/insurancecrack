@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="InsuranceCrack — Free insurance calculators. Estimate life, auto, health and home insurance coverage and premiums instantly."/>
+<meta name="keywords" content="insurance calculator, life insurance calculator, auto insurance calculator, health insurance calculator, home insurance calculator, how much life insurance do I need, insurance premium estimator, insurance coverage calculator"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://insurancecrack.pro/"/>
+<meta property="og:title" content="InsuranceCrack — Free Insurance Calculator"/>
+<meta property="og:description" content="Calculate life, auto, health and home insurance coverage and premiums instantly. Free, no signup."/>
+<meta property="og:url" content="https://insurancecrack.pro/"/>
+<meta property="og:type" content="website"/>
+<title>InsuranceCrack — Free Insurance Calculator | Life, Auto, Health & Home</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+<!-- AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5063827367072521" crossorigin="anonymous"></script>
+<!-- GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --accent:#1a7f5a;
+  --accent2:#22a374;
+  --accent-light:#e6f7f1;
+  --text:#0f1f1a;
+  --muted:#5a7069;
+  --border:#d4e8e0;
+  --surface:#ffffff;
+  --surface2:#f4faf7;
+  --surface3:#e9f5ef;
+  --danger:#e24b4a;
+  --radius:14px;
+  --radius-sm:8px;
+  --font:'DM Sans',sans-serif;
+  --display:'Syne',sans-serif;
+}
+body{font-family:var(--font);background:#eef6f1;color:var(--text);min-height:100vh;font-size:15px;line-height:1.5;}
+.site-header{background:var(--surface);border-bottom:1px solid var(--border);padding:0 24px;position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;height:56px;}
+.logo{font-family:var(--display);font-size:22px;font-weight:800;color:var(--text);text-decoration:none;letter-spacing:-0.5px;}
+.logo span{color:var(--accent);}
+.header-nav{display:flex;align-items:center;gap:6px;}
+.nav-chip{font-size:12px;font-weight:500;color:var(--muted);background:var(--surface2);border:1px solid var(--border);border-radius:20px;padding:4px 12px;text-decoration:none;transition:color .2s,border-color .2s;}
+.nav-chip:hover{color:var(--accent);border-color:var(--accent);}
+.wordcrack-link{color:var(--accent);border-color:var(--accent-light);background:var(--accent-light);}
+.main{max-width:960px;margin:0 auto;padding:24px 16px 48px;}
+.hero{text-align:center;margin-bottom:28px;}
+.hero-label{font-size:12px;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:.12em;margin-bottom:8px;}
+.hero-title{font-family:var(--display);font-size:36px;font-weight:800;color:var(--text);line-height:1.1;margin-bottom:8px;letter-spacing:-1px;}
+.hero-title span{color:var(--accent);}
+.hero-sub{font-size:15px;color:var(--muted);}
+/* TABS */
+.ins-tabs{display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap;}
+.ins-tab{padding:8px 18px;border-radius:20px;font-size:13px;font-weight:500;cursor:pointer;border:1.5px solid var(--border);color:var(--muted);background:var(--surface);transition:all .2s;-webkit-appearance:none;}
+.ins-tab.active{background:var(--accent);color:#fff;border-color:var(--accent);}
+.ins-tab:hover:not(.active){border-color:var(--accent2);color:var(--accent);}
+/* PANELS */
+.ins-panel{display:none;}
+.ins-panel.active{display:block;}
+/* CARD */
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin-bottom:16px;}
+.card-title{font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-bottom:18px;}
+/* FIELD */
+.field{margin-bottom:16px;}
+.field-label{font-size:13px;color:var(--muted);font-weight:500;margin-bottom:6px;display:block;}
+.field-value{font-size:13px;font-weight:700;color:var(--accent);float:right;}
+input[type=range]{width:100%;-webkit-appearance:none;appearance:none;height:4px;border-radius:2px;background:var(--border);outline:none;cursor:pointer;}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;border-radius:50%;background:var(--accent);cursor:pointer;border:2px solid #fff;box-shadow:0 1px 4px rgba(26,127,90,.3);}
+.select-field{width:100%;font-family:var(--font);font-size:14px;font-weight:500;color:var(--text);background:var(--surface2);border:1.5px solid var(--border);border-radius:var(--radius-sm);padding:9px 12px;outline:none;cursor:pointer;-webkit-appearance:none;transition:border-color .2s;}
+.select-field:focus{border-color:var(--accent);}
+.input-box{display:flex;align-items:center;gap:8px;background:var(--surface2);border:1.5px solid var(--border);border-radius:var(--radius-sm);padding:8px 12px;transition:border-color .2s;}
+.input-box:focus-within{border-color:var(--accent);}
+.input-prefix{font-size:14px;color:var(--muted);font-weight:500;}
+.input-box input{border:none;outline:none;background:transparent;font-family:var(--font);font-size:14px;font-weight:600;color:var(--text);width:100%;}
+.divider-line{height:1px;background:var(--border);margin:16px 0;}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+@media(max-width:600px){.grid-2{grid-template-columns:1fr;}.hero-title{font-size:28px;}.site-header{padding:0 14px;}}
+/* BUTTON */
+.btn-calc{width:100%;padding:12px;background:var(--accent);color:#fff;border:none;border-radius:var(--radius-sm);font-family:var(--font);font-size:14px;font-weight:700;cursor:pointer;-webkit-appearance:none;transition:transform .15s;margin-top:4px;}
+.btn-calc:active{transform:scale(0.98);}
+/* RESULTS */
+.results-card{background:var(--accent);border-radius:var(--radius);padding:20px;margin-top:16px;display:none;}
+.results-card.show{display:block;}
+.results-main{font-family:var(--display);font-size:42px;font-weight:800;color:#fff;line-height:1;margin-bottom:4px;}
+.results-label{font-size:12px;font-weight:600;color:rgba(255,255,255,.7);text-transform:uppercase;letter-spacing:.1em;margin-bottom:14px;}
+.results-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.results-stat{background:rgba(255,255,255,.15);border-radius:var(--radius-sm);padding:10px;}
+.results-stat-label{font-size:10px;color:rgba(255,255,255,.7);text-transform:uppercase;letter-spacing:.08em;margin-bottom:3px;}
+.results-stat-val{font-size:16px;font-weight:700;color:#fff;}
+/* FAQ */
+.faq-section{margin-top:24px;}
+.faq-item{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);margin-bottom:8px;overflow:hidden;}
+.faq-q{padding:14px 16px;font-size:14px;font-weight:600;color:var(--text);cursor:pointer;display:flex;justify-content:space-between;align-items:center;user-select:none;}
+.faq-q::after{content:'▾';color:var(--muted);transition:transform .2s;}
+.faq-item.open .faq-q::after{transform:rotate(-180deg);}
+.faq-a{display:none;padding:0 16px 14px;font-size:13px;color:var(--muted);line-height:1.7;}
+.faq-item.open .faq-a{display:block;}
+/* FOOTER */
+footer{text-align:center;padding:32px 16px;font-size:12px;color:var(--muted);}
+footer a{color:var(--accent);text-decoration:none;}
+.crack-family{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:8px;flex-wrap:wrap;}
+.family-chip{font-size:11px;padding:3px 10px;border-radius:12px;background:var(--accent-light);color:var(--accent);font-weight:600;text-decoration:none;}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <a class="logo" href="/">Insurance<span>Crack</span></a>
+  <nav class="header-nav">
+    <a class="nav-chip wordcrack-link" href="https://wordcrack.pro" target="_blank">WordCrack ↗</a>
+    <a class="nav-chip" href="https://loancrack.pro" target="_blank">LoanCrack ↗</a>
+  </nav>
+</header>
+
+<div style="max-width:728px;margin:16px auto;padding:0 16px;">
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5063827367072521" data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins>
+</div>
+
+<main class="main">
+  <div class="hero">
+    <div class="hero-label">Free insurance calculators</div>
+    <h1 class="hero-title">Crack your <span>insurance</span> costs</h1>
+    <p class="hero-sub">Estimate coverage and premiums for life, auto, health and home — instantly.</p>
+  </div>
+
+  <div class="ins-tabs">
+    <button class="ins-tab active" onclick="setTab('life')">🛡️ Life</button>
+    <button class="ins-tab" onclick="setTab('auto')">🚗 Auto</button>
+    <button class="ins-tab" onclick="setTab('health')">❤️ Health</button>
+    <button class="ins-tab" onclick="setTab('home')">🏠 Home</button>
+  </div>
+
+  <!-- LIFE -->
+  <div class="ins-panel active" id="panel-life">
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-title">Your details</div>
+        <div class="field"><label class="field-label">Age <span class="field-value" id="life-age-val">35</span></label><input type="range" id="life-age" min="18" max="70" value="35" oninput="document.getElementById('life-age-val').textContent=this.value"/></div>
+        <div class="field"><label class="field-label">Annual income <span class="field-value" id="life-income-val">$60,000</span></label><input type="range" id="life-income" min="20000" max="500000" step="5000" value="60000" oninput="document.getElementById('life-income-val').textContent='$'+Number(this.value).toLocaleString()"/></div>
+        <div class="field"><label class="field-label">Dependents</label><select class="select-field" id="life-deps"><option value="0">None</option><option value="1">1</option><option value="2" selected>2</option><option value="3">3</option><option value="4">4+</option></select></div>
+        <div class="field"><label class="field-label">Outstanding debts <span class="field-value" id="life-debt-val">$50,000</span></label><input type="range" id="life-debt" min="0" max="500000" step="5000" value="50000" oninput="document.getElementById('life-debt-val').textContent='$'+Number(this.value).toLocaleString()"/></div>
+        <div class="field"><label class="field-label">Health status</label><select class="select-field" id="life-health"><option value="excellent">Excellent</option><option value="good" selected>Good</option><option value="fair">Fair</option><option value="poor">Poor</option></select></div>
+        <button class="btn-calc" onclick="calcLife()">Calculate Coverage</button>
+      </div>
+      <div>
+        <div class="results-card show" id="life-results">
+          <div class="results-label">Recommended coverage</div>
+          <div class="results-main" id="life-coverage">$720,000</div>
+          <div style="font-size:11px;color:rgba(255,255,255,.7);margin-bottom:14px;">based on income × 10 + debts + dependents</div>
+          <div class="results-grid">
+            <div class="results-stat"><div class="results-stat-label">Est. monthly premium</div><div class="results-stat-val" id="life-monthly">$48/mo</div></div>
+            <div class="results-stat"><div class="results-stat-label">Policy term</div><div class="results-stat-val">20 years</div></div>
+            <div class="results-stat"><div class="results-stat-label">Annual premium</div><div class="results-stat-val" id="life-annual">$576/yr</div></div>
+            <div class="results-stat"><div class="results-stat-label">Coverage type</div><div class="results-stat-val">Term life</div></div>
+          </div>
+        </div>
+        <div class="faq-section">
+          <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How much life insurance do I need?</div><div class="faq-a">A common rule is 10–12× your annual income plus outstanding debts. If you have dependents, add $100K–$200K per child for education and living expenses.</div></div>
+          <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Term vs whole life insurance?</div><div class="faq-a">Term life covers you for a fixed period (10–30 years) and is much cheaper. Whole life covers you permanently and builds cash value, but costs 5–10× more. Most financial advisors recommend term life for most people.</div></div>
+          <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What affects my premium?</div><div class="faq-a">Age, health, smoking status, coverage amount, and policy term are the main factors. The younger and healthier you are when you buy, the cheaper your premium.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AUTO -->
+  <div class="ins-panel" id="panel-auto">
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-title">Vehicle details</div>
+        <div class="field"><label class="field-label">Vehicle value <span class="field-value" id="auto-val-val">$25,000</span></label><input type="range" id="auto-val" min="5000" max="200000" step="1000" value="25000" oninput="document.getElementById('auto-val-val').textContent='$'+Number(this.value).toLocaleString()"/></div>
+        <div class="field"><label class="field-label">Driver age <span class="field-value" id="auto-age-val">35</span></label><input type="range" id="auto-age" min="16" max="75" value="35" oninput="document.getElementById('auto-age-val').textContent=this.value"/></div>
+        <div class="field"><label class="field-label">Driving record</label><select class="select-field" id="auto-record"><option value="clean" selected>Clean (no accidents)</option><option value="minor">Minor violations</option><option value="major">Major accident/DUI</option></select></div>
+        <div class="field"><label class="field-label">Coverage level</label><select class="select-field" id="auto-cov"><option value="liability">Liability only</option><option value="standard" selected>Standard (collision + comp)</option><option value="full">Full coverage</option></select></div>
+        <div class="field"><label class="field-label">Annual mileage</label><select class="select-field" id="auto-miles"><option value="low">Under 7,500 mi/yr</option><option value="avg" selected>7,500–15,000 mi/yr</option><option value="high">Over 15,000 mi/yr</option></select></div>
+        <button class="btn-calc" onclick="calcAuto()">Calculate Premium</button>
+      </div>
+      <div>
+        <div class="results-card show" id="auto-results">
+          <div class="results-label">Estimated annual premium</div>
+          <div class="results-main" id="auto-annual">$1,440</div>
+          <div class="results-grid">
+            <div class="results-stat"><div class="results-stat-label">Monthly payment</div><div class="results-stat-val" id="auto-monthly">$120/mo</div></div>
+            <div class="results-stat"><div class="results-stat-label">6-month premium</div><div class="results-stat-val" id="auto-6mo">$720</div></div>
+            <div class="results-stat"><div class="results-stat-label">Liability limit</div><div class="results-stat-val">$100K</div></div>
+            <div class="results-stat"><div class="results-stat-label">Deductible</div><div class="results-stat-val">$500</div></div>
+          </div>
+        </div>
+        <div class="faq-section">
+          <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is the minimum auto insurance required?</div><div class="faq-a">Most US states require liability insurance at minimum — covering bodily injury and property damage you cause to others. Minimums vary by state, typically $25K–$50K per person.</div></div>
+          <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How can I lower my auto insurance premium?</div><div class="faq-a">Bundle with home insurance, maintain a clean driving record, increase your deductible, take a defensive driving course, and ask about low-mileage discounts.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEALTH -->
+  <div class="ins-panel" id="panel-health">
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-title">Your profile</div>
+        <div class="field"><label class="field-label">Age <span class="field-value" id="health-age-val">35</span></label><input type="range" id="health-age" min="18" max="65" value="35" oninput="document.getElementById('health-age-val').textContent=this.value"/></div>
+        <div class="field"><label class="field-label">Plan type</label><select class="select-field" id="health-plan"><option value="bronze">Bronze (low premium, high deductible)</option><option value="silver" selected>Silver (balanced)</option><option value="gold">Gold (high premium, low deductible)</option><option value="platinum">Platinum (highest coverage)</option></select></div>
+        <div class="field"><label class="field-label">Coverage</label><select class="select-field" id="health-cov"><option value="individual" selected>Individual</option><option value="couple">Couple</option><option value="family">Family</option></select></div>
+        <div class="field"><label class="field-label">Smoker?</label><select class="select-field" id="health-smoke"><option value="no" selected>No</option><option value="yes">Yes</option></select></div>
+        <button class="btn-calc" onclick="calcHealth()">Calculate Cost</button>
+      </div>
+      <div>
+        <div class="results-card show" id="health-results">
+          <div class="results-label">Estimated monthly premium</div>
+          <div class="results-main" id="health-monthly">$420</div>
+          <div class="results-grid">
+            <div class="results-stat"><div class="results-stat-label">Annual premium</div><div class="results-stat-val" id="health-annual">$5,040</div></div>
+            <div class="results-stat"><div class="results-stat-label">Est. deductible</div><div class="results-stat-val" id="health-ded">$3,000</div></div>
+            <div class="results-stat"><div class="results-stat-label">Out-of-pocket max</div><div class="results-stat-val" id="health-oop">$7,000</div></div>
+            <div class="results-stat"><div class="results-stat-label">Copay (primary care)</div><div class="results-stat-val" id="health-copay">$30</div></div>
+          </div>
+        </div>
+        <div class="faq-section">
+          <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Which health plan tier is best?</div><div class="faq-a">Silver plans are most popular — they balance premiums and out-of-pocket costs. If you're healthy and rarely see doctors, Bronze saves money. If you have regular medical needs, Gold or Platinum saves on out-of-pocket costs.</div></div>
+          <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is an out-of-pocket maximum?</div><div class="faq-a">The maximum you'll pay in a year before insurance covers 100% of costs. In 2024, the ACA limit is $9,450 for individuals and $18,900 for families.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HOME -->
+  <div class="ins-panel" id="panel-home">
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-title">Property details</div>
+        <div class="field"><label class="field-label">Home value <span class="field-value" id="home-val-val">$350,000</span></label><input type="range" id="home-val" min="50000" max="2000000" step="10000" value="350000" oninput="document.getElementById('home-val-val').textContent='$'+Number(this.value).toLocaleString()"/></div>
+        <div class="field"><label class="field-label">Home size (sq ft) <span class="field-value" id="home-sqft-val">1,800</span></label><input type="range" id="home-sqft" min="500" max="5000" step="100" value="1800" oninput="document.getElementById('home-sqft-val').textContent=Number(this.value).toLocaleString()"/></div>
+        <div class="field"><label class="field-label">Home age (years) <span class="field-value" id="home-age-val">15</span></label><input type="range" id="home-age" min="0" max="100" value="15" oninput="document.getElementById('home-age-val').textContent=this.value"/></div>
+        <div class="field"><label class="field-label">Construction type</label><select class="select-field" id="home-type"><option value="frame" selected>Wood frame</option><option value="brick">Brick/masonry</option><option value="mixed">Mixed</option></select></div>
+        <div class="field"><label class="field-label">Risk area</label><select class="select-field" id="home-risk"><option value="low">Low (no flood/fire zone)</option><option value="medium" selected>Medium</option><option value="high">High (flood/fire prone)</option></select></div>
+        <div class="field"><label class="field-label">Security system?</label><select class="select-field" id="home-security"><option value="yes">Yes — full alarm system</option><option value="basic" selected>Basic (smoke/CO detectors)</option><option value="no">No</option></select></div>
+        <button class="btn-calc" onclick="calcHome()">Calculate Premium</button>
+      </div>
+      <div>
+        <div class="results-card show" id="home-results">
+          <div class="results-label">Recommended dwelling coverage</div>
+          <div class="results-main" id="home-coverage">$270,000</div>
+          <div class="results-grid">
+            <div class="results-stat"><div class="results-stat-label">Annual premium</div><div class="results-stat-val" id="home-annual">$2,160</div></div>
+            <div class="results-stat"><div class="results-stat-label">Monthly payment</div><div class="results-stat-val" id="home-monthly">$180/mo</div></div>
+            <div class="results-stat"><div class="results-stat-label">Personal property</div><div class="results-stat-val" id="home-personal">$135,000</div></div>
+            <div class="results-stat"><div class="results-stat-label">Liability coverage</div><div class="results-stat-val">$100,000</div></div>
+          </div>
+        </div>
+        <div class="faq-section">
+          <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How much home insurance do I need?</div><div class="faq-a">Your dwelling coverage should equal the cost to rebuild your home, not its market value. Rebuilding typically costs $100–$200/sq ft depending on location and materials.</div></div>
+          <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Does home insurance cover floods?</div><div class="faq-a">Standard home insurance does NOT cover flood damage. You need a separate flood insurance policy, typically through the National Flood Insurance Program (NFIP) or private insurers.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BOTTOM AD -->
+  <div style="margin-top:24px;">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5063827367072521" data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  </div>
+
+  <!-- SEO SECTION -->
+  <div style="padding:20px 0;border-top:1px solid var(--border);margin-top:24px;">
+    <h2 style="font-size:14px;font-weight:700;color:var(--muted);margin-bottom:8px;">About InsuranceCrack</h2>
+    <p style="font-size:12px;color:var(--muted);line-height:1.8;margin-bottom:8px;">InsuranceCrack is a free insurance calculator that helps you estimate how much life, auto, health and home insurance coverage you need and what it might cost. No signup, no paywall, completely free.</p>
+    <p style="font-size:12px;color:var(--muted);line-height:1.8;">Get instant estimates for life insurance coverage based on your income and dependents, auto insurance premiums based on your vehicle and driving record, health insurance monthly costs by plan tier, and home insurance dwelling coverage based on rebuild cost.</p>
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2026 InsuranceCrack &mdash; Free insurance calculators &mdash; <a href="https://insurancecrack.pro">insurancecrack.pro</a></p>
+  <div class="crack-family" style="margin-top:10px">
+    <span style="font-size:11px;color:var(--muted)">More free tools:</span>
+    <a class="family-chip" href="https://wordcrack.pro" target="_blank">WordCrack</a>
+    <a class="family-chip" href="https://loancrack.pro" target="_blank">LoanCrack</a>
+  </div>
+</footer>
+
+<script>
+function setTab(t){
+  document.querySelectorAll('.ins-tab').forEach(function(b,i){b.classList.toggle('active',['life','auto','health','home'][i]===t);});
+  document.querySelectorAll('.ins-panel').forEach(function(p){p.classList.remove('active');});
+  document.getElementById('panel-'+t).classList.add('active');
+}
+function fmt(n){return '$'+Math.round(n).toLocaleString();}
+
+// LIFE
+function calcLife(){
+  var age=+document.getElementById('life-age').value;
+  var income=+document.getElementById('life-income').value;
+  var deps=+document.getElementById('life-deps').value;
+  var debt=+document.getElementById('life-debt').value;
+  var health=document.getElementById('life-health').value;
+  var coverage=income*10+debt+(deps*150000);
+  var rate=0.0008;
+  if(age>45)rate=0.0015;if(age>55)rate=0.003;
+  if(health==='fair')rate*=1.5;if(health==='poor')rate*=2.5;
+  var annual=Math.round(coverage*rate);
+  document.getElementById('life-coverage').textContent=fmt(coverage);
+  document.getElementById('life-annual').textContent=fmt(annual)+'/yr';
+  document.getElementById('life-monthly').textContent=fmt(annual/12)+'/mo';
+}
+
+// AUTO
+function calcAuto(){
+  var val=+document.getElementById('auto-val').value;
+  var age=+document.getElementById('auto-age').value;
+  var record=document.getElementById('auto-record').value;
+  var cov=document.getElementById('auto-cov').value;
+  var miles=document.getElementById('auto-miles').value;
+  var base=val*0.05;
+  if(cov==='liability')base=800;
+  if(cov==='full')base*=1.3;
+  if(age<25)base*=1.4;if(age>65)base*=1.15;
+  if(record==='minor')base*=1.25;if(record==='major')base*=1.7;
+  if(miles==='high')base*=1.1;if(miles==='low')base*=0.9;
+  var annual=Math.round(base);
+  document.getElementById('auto-annual').textContent=fmt(annual);
+  document.getElementById('auto-monthly').textContent=fmt(annual/12)+'/mo';
+  document.getElementById('auto-6mo').textContent=fmt(annual/2);
+}
+
+// HEALTH
+function calcHealth(){
+  var age=+document.getElementById('health-age').value;
+  var plan=document.getElementById('health-plan').value;
+  var cov=document.getElementById('health-cov').value;
+  var smoke=document.getElementById('health-smoke').value;
+  var base={bronze:280,silver:420,gold:580,platinum:750}[plan];
+  if(cov==='couple')base*=1.9;if(cov==='family')base*=2.8;
+  if(age>50)base*=1.3;if(age>60)base*=1.6;
+  if(smoke==='yes')base*=1.5;
+  var monthly=Math.round(base);
+  var ded={bronze:6000,silver:3000,gold:1500,platinum:500}[plan];
+  var oop={bronze:9000,silver:7000,gold:5000,platinum:2500}[plan];
+  var copay={bronze:40,silver:30,gold:20,platinum:10}[plan];
+  document.getElementById('health-monthly').textContent=fmt(monthly);
+  document.getElementById('health-annual').textContent=fmt(monthly*12);
+  document.getElementById('health-ded').textContent=fmt(ded);
+  document.getElementById('health-oop').textContent=fmt(oop);
+  document.getElementById('health-copay').textContent='$'+copay;
+}
+
+// HOME
+function calcHome(){
+  var homeVal=+document.getElementById('home-val').value;
+  var sqft=+document.getElementById('home-sqft').value||0;
+  var homeAge=+document.getElementById('home-age').value;
+  var type=document.getElementById('home-type').value;
+  var risk=document.getElementById('home-risk').value;
+  var security=document.getElementById('home-security').value;
+  var rebuildPerSqft=type==='brick'?160:type==='frame'?140:150;
+  var dwelling=Math.max(sqft*rebuildPerSqft,homeVal*0.7);
+  var rate=0.008;
+  if(risk==='high')rate=0.013;if(risk==='low')rate=0.005;
+  if(homeAge>30)rate*=1.15;
+  if(type==='frame')rate*=1.05;
+  if(security==='yes')rate*=0.9;if(security==='basic')rate*=0.95;
+  var annual=Math.round(dwelling*rate);
+  var personal=Math.round(dwelling*0.5);
+  document.getElementById('home-coverage').textContent=fmt(dwelling);
+  document.getElementById('home-annual').textContent=fmt(annual);
+  document.getElementById('home-monthly').textContent=fmt(annual/12)+'/mo';
+  document.getElementById('home-personal').textContent=fmt(personal);
+}
+
+function toggleFaq(el){el.parentElement.classList.toggle('open');}
+
+// Init defaults
+calcLife();calcAuto();calcHealth();calcHome();
+</script>
+</body>
+</html>
