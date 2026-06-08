@@ -372,5 +372,16 @@ function toggleFaq(el){el.parentElement.classList.toggle('open');}
 // Init defaults
 calcLife();calcAuto();calcHealth();calcHome();
 </script>
+
+<script>
+(function(){
+  fetch('https://mjnigheggxtythytsqle.supabase.co/rest/v1/insurancecrack_visits',{
+    method:'POST',
+    headers:{'apikey':'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1qbmlnaGVnZ3h0eXRoeXRzcWxlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODAwNzYwMDcsImV4cCI6MjA5NTY1MjAwN30.mh1psePuKeQ8SH5uita7BsUKd6wd5IwHVVlDmJCMA0Q','Authorization':'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1qbmlnaGVnZ3h0eXRoeXRzcWxlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODAwNzYwMDcsImV4cCI6MjA5NTY1MjAwN30.mh1psePuKeQ8SH5uita7BsUKd6wd5IwHVVlDmJCMA0Q','Content-Type':'application/json','Prefer':'return=minimal'},
+    body:JSON.stringify({})
+  });
+})();
+</script>
+
 </body>
 </html>
